@@ -80,7 +80,7 @@ async function setupApplepay() {
         const { id } = await orderResponse.json()
         console.log({ id })
         /**
-         * Confirm Payment 
+         * Confirm Payment
          */
         await applepay.confirmOrder({ orderId: id, token: event.payment.token, billingContact: event.payment.billingContact , shippingContact: event.payment.shippingContact });
 
